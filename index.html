@@ -8,239 +8,250 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-navy: #0a2540;     /* Azul escuro institucional */
-            --accent-gold: #b8860b;      /* Dourado sofisticado */
-            --body-gray: #4a5568;        /* Cinza suave para leitura confortável */
-            --bg-light: #fdfdfb;         /* Off-white de fundo (estilo premium) */
-            --whatsapp-green: #25d366;
+            --primary: #0052cc;       /* Azul moderno e vibrante de tecnologia/web */
+            --primary-dark: #003399;
+            --accent: #00bfa5;        /* Verde água para botões e detalhes */
+            --dark: #121824;          /* Grafite escuro moderno para o texto */
+            --light-bg: #f4f7fe;      /* Fundo levemente azulado, cara de sistema/web moderna */
+            --whatsapp: #25d366;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: var(--body-gray);
-            background-color: var(--bg-light);
-            overflow-x: hidden;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--dark);
+            background-color: #ffffff;
         }
 
-        h1, h2, h3, .font-serif {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-navy);
-            font-weight: 700;
-        }
-
-        /* Linha decorativa superior sutil */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary-navy) 0%, var(--accent-gold) 100%);
-            z-index: 1050;
-        }
-
-        /* Navbar Clean e Elegante */
+        /* Navbar Fluida e Moderna */
         .navbar {
-            background-color: rgba(253, 253, 251, 0.95) !important;
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            border-bottom: 1px solid #eef2f7;
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(12px);
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .navbar-brand {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: var(--primary-navy) !important;
-            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary) !important;
+            font-size: 1.3rem;
             letter-spacing: -0.5px;
         }
 
         .nav-link {
-            color: var(--primary-navy) !important;
-            font-weight: 500;
-            margin: 0 15px;
+            color: var(--dark) !important;
+            font-weight: 600;
+            margin: 0 10px;
             font-size: 0.95rem;
-            transition: color 0.3s ease;
+            transition: color 0.2s ease;
         }
 
         .nav-link:hover {
-            color: var(--accent-gold) !important;
+            color: var(--primary) !important;
         }
 
-        /* Botão Principal Estilo Alfaiataria/Premium */
-        .btn-gav {
-            background-color: var(--primary-navy);
-            color: #ffffff !important;
-            font-weight: 500;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 14px 32px;
-            border-radius: 0px; /* Quadrado passa mais rigidez e seriedade */
-            border: 1px solid var(--primary-navy);
-            transition: all 0.3s ease;
-        }
-
-        .btn-gav:hover {
-            background-color: transparent;
-            color: var(--primary-navy) !important;
-            border-color: var(--primary-navy);
-        }
-
-        .btn-gav-gold {
-            background-color: var(--accent-gold);
-            border-color: var(--accent-gold);
-        }
-        .btn-gav-gold:hover {
-            background-color: transparent;
-            color: var(--accent-gold) !important;
-            border-color: var(--accent-gold);
-        }
-
-        /* Seção de Entrada (Hero) */
-        .hero-section {
-            padding: 140px 0 100px 0;
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .hero-tag {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--accent-gold);
+        /* Botões Arredondados Estilo Web 3.0 */
+        .btn-modern {
             font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 28px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-modern-primary {
+            background-color: var(--primary);
+            color: #ffffff !important;
+            border: 2px solid var(--primary);
+        }
+
+        .btn-modern-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 82, 204, 0.2);
+        }
+
+        .btn-modern-accent {
+            background-color: var(--accent);
+            color: #ffffff !important;
+            border: 2px solid var(--accent);
+        }
+
+        .btn-modern-accent:hover {
+            background-color: #009688;
+            border-color: #009688;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 191, 165, 0.2);
+        }
+
+        /* Hero Section Viva e Aberta */
+        .hero {
+            padding: 160px 0 100px 0;
+            background: radial-gradient(circle at 90% 10%, rgba(0, 82, 204, 0.05) 0%, rgba(255, 255, 255, 1) 70%);
+            position: relative;
+        }
+
+        .hero-badge {
+            background-color: rgba(0, 82, 204, 0.08);
+            color: var(--primary);
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
             margin-bottom: 20px;
-            display: block;
+            display: inline-block;
         }
 
-        .hero-title {
-            font-size: 4rem;
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1.5px;
             line-height: 1.15;
-            margin-bottom: 30px;
+            color: var(--dark);
+            margin-bottom: 25px;
         }
 
-        .hero-subtitle {
-            font-size: 1.25rem;
-            max-width: 800px;
-            font-weight: 300;
-            line-height: 1.8;
-            margin-bottom: 40px;
+        .hero p {
+            font-size: 1.2rem;
+            color: #5c6984;
+            max-width: 680px;
+            line-height: 1.7;
+            margin-bottom: 35px;
         }
 
-        /* Seções Gerais */
+        /* Seções do Site */
         section {
-            padding: 100px 0;
+            padding: 90px 0;
+        }
+
+        .section-tag {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            display: block;
+            margin-bottom: 12px;
         }
 
         .section-title {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 40px;
         }
 
-        .section-subtitle {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 60px auto;
-            color: #718096;
-        }
-
-        /* Molduras de fotos sofisticadas */
-        .photo-frame {
-            position: relative;
+        /* Galeria de Fotos Estilo Grid de Site Real */
+        .gallery-card {
             background: #ffffff;
-            padding: 15px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: all 0.4s ease;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border: 1px solid #eef2f7;
+            transition: all 0.3s ease;
         }
 
-        .photo-frame:hover {
+        .gallery-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(10,37,64,0.08);
-            border-color: var(--accent-gold);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
         }
 
-        .photo-frame img {
+        .image-wrapper {
             width: 100%;
-            height: 340px;
-            object-fit: cover;
+            height: 260px;
+            background-color: #0b0f17; /* Fundo escuro sutil se a imagem sobrar */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
 
-        .photo-caption {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.1rem;
-            color: var(--primary-navy);
-            margin-top: 15px;
-            text-align: center;
-        }
-
-        /* Bloco de Doações Clean */
-        .donation-box {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            padding: 60px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.02);
-            position: relative;
-        }
-
-        .donation-box::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
+        .gallery-card img {
+            width: 100%;
             height: 100%;
-            background-color: var(--accent-gold);
+            object-fit: cover; /* Corta inteligentemente sem achatar */
+            transition: transform 0.5s ease;
         }
 
-        .pix-title {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent-gold);
-            font-weight: 600;
+        /* Ajuste específico para a foto institucional não cortar rostos */
+        .img-contain {
+            object-fit: contain !important; 
         }
 
-        .pix-key-display {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-navy);
-            letter-spacing: -1px;
-            background: #f8f9fa;
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-info {
             padding: 20px;
-            margin: 25px 0;
-            border-left: 3px solid var(--primary-navy);
+        }
+
+        .gallery-info h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        /* Área de Doações Estilo Fintech/Moderna */
+        .donation-area {
+            background-color: var(--light-bg);
+            border-radius: 24px;
+            padding: 60px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .pix-container {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            border: 1px solid #edf2f7;
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .pix-key {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            background: var(--light-bg);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
             word-break: break-all;
         }
 
-        /* Contato e Diretoria */
-        .contact-card {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            padding: 40px;
+        /* Caixa de Contato */
+        .info-card {
+            background: #ffffff;
+            border: 1px solid #edf2f7;
+            padding: 30px;
+            border-radius: 16px;
+            height: 100%;
         }
 
-        /* Botão Flutuante Elegante do WhatsApp */
+        /* Botão Flutuante do WhatsApp */
         .whatsapp-float {
             position: fixed;
-            width: 55px;
-            height: 55px;
-            bottom: 35px;
-            right: 35px;
-            background-color: var(--whatsapp-green);
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp);
             color: white;
             border-radius: 50%;
             text-align: center;
-            font-size: 26px;
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
-            z-index: 999;
+            font-size: 30px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -250,144 +261,124 @@
 
         .whatsapp-float:hover {
             background-color: #20ba5a;
-            transform: scale(1.08);
+            transform: scale(1.1);
             color: white;
         }
 
         /* Footer */
         footer {
-            background-color: var(--primary-navy);
-            color: #a0aec0;
-            padding: 80px 0 40px 0;
+            background-color: var(--dark);
+            color: #94a3b8;
+            padding: 60px 0 30px 0;
             font-size: 0.9rem;
-            border-top: 4px solid var(--accent-gold);
         }
 
         footer h5 {
             color: #ffffff;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
         footer a {
             color: #ffffff;
             text-decoration: none;
-            transition: color 0.2s ease;
         }
 
         footer a:hover {
-            color: var(--accent-gold);
+            color: var(--accent);
         }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/5586981103341?text=Olá! Gostaria de falar com a diretoria da Associação Grupo Amigos da Vida." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5586981103341?text=Olá! Gostaria de falar com a diretoria do Grupo Amigos da Vida." class="whatsapp-float" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="#">GAV TERESINA</a>
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-circle-nodes me-2"></i>GAV TERESINA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#institucional">Institucional</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#atuacao">Nossa Atuação</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#transparencia">Doações</a></li>
-                    <li class="nav-item px-2"><a class="nav-link" href="#diretoria">Contato</a></li>
-                    <li class="nav-item ms-lg-2"><a class="btn btn-gav" href="#transparencia">Apoiar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Quem Somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#acoes">Projetos em Fotos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#doar">Doações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn-modern btn-modern-primary" href="#doar">Apoiar Projeto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section">
+    <header class="hero">
         <div class="container">
-            <span class="hero-tag">Associação Beneficente</span>
-            <h1 class="hero-title">Inclusão Social e Dignidade <br>no Coração do Piauí</h1>
-            <p class="hero-subtitle">Reconhecido como de Utilidade Pública Estadual (Lei nº 7.564), o Grupo Amigos da Vida (GAV) desenvolve projetos de amparo e transformação socioeducativa na zona Leste de Teresina desde 2007.</p>
-            <a href="#transparencia" class="btn btn-gav btn-gav-gold btn-lg">Conheça Nossas Fontes de Apoio</a>
+            <span class="hero-badge">Utilidade Pública Estadual — Lei nº 7.564</span>
+            <h1>Apoie o desenvolvimento social<br>da zona Leste de Teresina</h1>
+            <p>O Grupo Amigos da Vida (GAV) transforma a realidade de famílias no bairro Vale Quem Tem através de iniciativas de esporte, cultura e qualificação socioeducativa desde 2007.</p>
+            <div class="d-flex flex-wrap gap-3">
+                <a href="#doar" class="btn-modern btn-modern-primary">Quero Fazer um PIX</a>
+                <a href="https://instagram.com/grupodeamigosdavida" target="_blank" class="btn-modern btn-modern-accent"><i class="fa-brands fa-instagram me-2"></i>Ver Nosso Instagram</a>
+            </div>
         </div>
     </header>
 
-    <section id="institucional">
+    <section id="sobre">
         <div class="container">
-            <div class="row align-items-center g-5">
+            <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
-                    <span class="hero-tag" style="margin-bottom: 10px;">Quem Somos</span>
-                    <h2 class="section-title" style="font-size: 2.5rem;">Uma trajetória sólida voltada ao bem comum</h2>
-                    <p class="lead mb-4" style="color: var(--primary-navy); font-weight: 500;">Sediado na Avenida Maria Antonieta Burlamaqui, no Vale Quem Tem, o GAV gerencia propostas de acolhimento e desenvolvimento humano.</p>
-                    <p class="mb-0">Nosso trabalho abrange a criação de oficinas culturais, atividades de lazer e apoio socioeducativo estruturado, servindo de ponte para que jovens e famílias em vulnerabilidade social conquistem autonomia e dignidade.</p>
+                    <span class="section-tag">Institucional</span>
+                    <h2 class="section-title" style="margin-bottom: 20px;">Trabalho sério com foco na inclusão social</h2>
+                    <p class="lead text-muted">Gerenciamos propostas de acolhimento familiar e oficinas profissionalizantes para construir pontes de autonomia comunitária.</p>
                 </div>
                 <div class="col-lg-6">
-                    <div style="border-left: 2px solid #e2e8f0; padding-left: 40px;">
-                        <h4 class="font-serif text-dark mb-3">Chancela Estadual</h4>
-                        <p class="small text-muted mb-4">A qualificação como Entidade de Utilidade Pública valida a aplicação transparente de recursos e emendas parlamentares em benefício direto da comunidade local.</p>
-                        <hr>
-                        <p class="small text-muted mt-4"><strong>CNPJ Oficial:</strong> 08.817.236/0001-27 <br><strong>Início das Atividades:</strong> 20 de Março de 2007</p>
+                    <div class="p-4 bg-light rounded-4 border">
+                        <h5 class="fw-bold text-primary mb-2">Transparência Legal</h5>
+                        <p class="small text-secondary mb-0"><strong>CNPJ:</strong> 08.817.236/0001-27 <br><strong>Sede:</strong> Av. Maria Antonieta Burlamaqui, 3551 — Vale Quem Tem</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="atuacao" class="bg-light" style="background-color: #f8f9fa;">
+    <section id="acoes" class="bg-light" style="background-color: #fafbfc;">
         <div class="container">
-            <div class="text-center">
-                <span class="hero-tag">Registros Reais</span>
-                <h2 class="section-title">Nossa atuação em evidência</h2>
-                <p class="section-subtitle">Imagens autênticas que documentam o impacto das nossas ações e as articulações institucionais em prol de Teresina.</p>
-            </div>
+            <span class="section-tag text-center d-block">Galeria Ativa</span>
+            <h2 class="section-title text-center">Nossas ações em fotos</h2>
             
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="photo-frame">
-                        <img src="https://i.postimg.cc/G2M2kF0M/gav-wellington.png" alt="Articulação Política e Institucional - GAV">
-                        <div class="photo-caption">Parcerias e Articulação Institucional</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="photo-frame">
-                        <img src="https://i.postimg.cc/PfwJL832/gav-acao-1.png" alt="Projetos Sociais GAV">
-                        <div class="photo-caption">Ações na Comunidade</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="photo-frame">
-                        <img src="https://i.postimg.cc/jjDKGGB8/Captura-de-tela-2026-05-16-215855.png" alt="Atendimento e Assistência GAV">
-                        <div class="photo-caption">Impacto Social Direto</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="transparencia">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="donation-box">
-                        <span class="pix-title"><i class="fa-solid fa-shield-checkmark me-2"></i>Conta Corrente Institucional</span>
-                        <h2 class="my-3" style="font-size: 2.3rem;">Canal Oficial de Arrecadação</h2>
-                        <p>Para assegurar a manutenção dos nossos projetos e a expansão do atendimento no Vale Quem Tem, disponibilizamos nossos dados bancários jurídicos exclusivos para auditoria e controle:</p>
-                        
-                        <div class="pix-key-display">
-                            08.817.236/0001-27
+                    <div class="gallery-card">
+                        <div class="image-wrapper">
+                            <img src="https://i.postimg.cc/G2M2kF0M/gav-wellington.png" class="img-contain" alt="Articulação GAV Teresina">
                         </div>
-                        
-                        <div class="row pt-3 g-4">
-                            <div class="col-sm-6">
-                                <p class="mb-1 small text-uppercase text-muted">Instituição Bancária</p>
-                                <h6 class="text-dark fw-bold" style="font-family:'Inter',sans-serif;">Banco do Brasil S.A.</h6>
-                            </div>
-                            <div class="col-sm-6">
-                                <p class="mb-1 small text-uppercase text-muted">Favorecido / Titular</p>
-                                <h6 class="text-dark fw-bold" style="font-family:'Inter',sans-serif;">Grupo de Amigos da Vida</h6>
-                            </div>
+                        <div class="gallery-info">
+                            <h5>Articulação Institucional</h5>
+                            <p class="small text-muted mb-0">Alinhamento de projetos e emendas com lideranças estaduais.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-card">
+                        <div class="image-wrapper">
+                            <img src="https://i.postimg.cc/PfwJL832/gav-acao-1.png" alt="Ação Comunitária">
+                        </div>
+                        <div class="gallery-info">
+                            <h5>Ações na Comunidade</h5>
+                            <p class="small text-muted mb-0">Atividades e eventos promovidos direto no Vale Quem Tem.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-card">
+                        <div class="image-wrapper">
+                            <img src="https://i.postimg.cc/jjDKGGB8/Captura-de-tela-2026-05-16-215855.png" alt="Projetos Sociais">
+                        </div>
+                        <div class="gallery-info">
+                            <h5>Suporte às Famílias</h5>
+                            <p class="small text-muted mb-0">Entregas de doações e acompanhamento socioeducativo.</p>
                         </div>
                     </div>
                 </div>
@@ -395,26 +386,43 @@
         </div>
     </section>
 
-    <section id="diretoria" class="bg-light" style="background-color: #f8f9fa; border-top: 1px solid #e2e8f0;">
+    <section id="doar">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-card">
-                        <span class="hero-tag" style="margin-bottom: 10px;">Atendimento Direto</span>
-                        <h3 class="mb-3">Contato com a Diretoria Executiva</h3>
-                        <p class="mb-5">Canal exclusivo focado em prestação de contas, termos de fomento, emendas parlamentares ou agendamento de visitas institucionais à nossa sede.</p>
-                        
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="fs-3 text-dark me-3" style="color: var(--primary-navy) !important;"><i class="fa-solid fa-phone-volume"></i></div>
-                            <div>
-                                <span class="d-block small text-muted text-uppercase">Linha Direta / WhatsApp</span>
-                                <a href="tel:+5586981103341" class="fs-4 fw-bold text-decoration-none text-dark">(86) 98110-3341</a>
-                            </div>
+            <div class="donation-area text-center">
+                <span class="section-tag">Como Ajudar</span>
+                <h2 class="section-title" style="margin-bottom: 20px;">Sua contribuição transforma vidas</h2>
+                <p class="text-muted max-width-600 mx-auto mb-5">Os recursos arrecadados são integralmente destinados à manutenção das atividades da nossa sede e expansão dos projetos.</p>
+                
+                <div class="pix-container mx-auto">
+                    <span class="small fw-bold text-uppercase tracking-wider text-muted"><i class="fa-solid fa-pix text-success me-1"></i> Chave PIX Oficial</span>
+                    <div class="pix-key">08.817.236/0001-27</div>
+                    <hr class="my-3">
+                    <p class="mb-1 small"><strong>Banco Jurídico:</strong> Banco do Brasil</p>
+                    <p class="mb-0 small"><strong>Favorecido:</strong> Grupo de Amigos da Vida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <span class="section-tag text-center d-block">Transparência</span>
+            <h2 class="section-title text-center">Fale com a nossa administração</h2>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h4 class="fw-bold mb-3"><i class="fa-solid fa-user-tie text-primary me-2"></i>Diretoria Executiva</h4>
+                        <p class="text-muted">Canal direto para tratar de termos de fomento, parcerias oficiais, emendas parlamentares ou agendamento de visitas institucionais.</p>
+                        <div class="mt-4">
+                            <span class="text-muted d-block small">Telefone / WhatsApp</span>
+                            <a href="tel:+5586981103341" class="fs-4 fw-bold text-dark text-decoration-none">(86) 98110-3341</a>
                         </div>
-                        
-                        <a href="https://wa.me/5586981103341?text=Olá! Gostaria de falar com a diretoria do GAV." target="_blank" class="btn btn-gav btn-gav-gold">
-                            <i class="fa-brands fa-whatsapp me-2"></i>Falar no WhatsApp
-                        </a>
+                        <div class="mt-4">
+                            <a href="https://wa.me/5586981103341?text=Olá! Gostaria de falar com a diretoria do GAV." target="_blank" class="btn-modern btn-modern-accent">
+                                <i class="fa-brands fa-whatsapp me-2"></i>Iniciar Conversa
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -423,21 +431,19 @@
 
     <footer>
         <div class="container">
-            <div class="row g-4">
+            <div class="row g-4 text-center text-md-start">
                 <div class="col-md-6">
-                    <h5 class="font-serif">Associação Grupo Amigos da Vida</h5>
-                    <p class="small text-muted mb-3">Promovendo amparo social e desenvolvimento comunitário contínuo.</p>
-                    <p class="small text-muted"><i class="fa-solid fa-location-dot me-2"></i>Av. Maria Antonieta Burlamaqui, 3551 — Vale Quem Tem. Teresina - PI</p>
+                    <h5>Grupo Amigos da Vida (GAV)</h5>
+                    <p class="small text-muted">Transformando realidades em Teresina - PI desde 2007.</p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <h5>Canais Digitais</h5>
-                    <p class="small text-muted">Acompanhe nossas auditorias visuais e relatórios pelo Instagram oficial:</p>
-                    <a href="https://instagram.com/grupodeamigosdavida" target="_blank" class="fw-bold"><i class="fa-brands fa-instagram me-1"></i>@grupodeamigosdavida</a>
+                <div class="col-md-6 text-md-end text-center">
+                    <h5>Redes Sociais</h5>
+                    <a href="https://instagram.com/grupodeamigosdavida" target="_blank" class="fw-bold text-accent">@grupodeamigosdavida</a>
                 </div>
             </div>
-            <hr style="border-color: rgba(255,255,255,0.1); margin: 40px 0 20px 0;">
-            <div class="text-center small text-muted">
-                © 2026 GAV Teresina. CNPJ: 08.817.236/0001-27. Todos os direitos reservados.
+            <hr class="border-secondary my-4">
+            <div class="text-center text-muted small">
+                © 2026 GAV Teresina. Todos os direitos reservados.
             </div>
         </div>
     </footer>
