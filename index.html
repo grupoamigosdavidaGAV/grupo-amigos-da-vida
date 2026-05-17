@@ -3,246 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Amigos da Vida (GAV) - Teresina/PI</title>
+    <title>Grupo Amigos da Vida (GAV) — Teresina/PI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --primary-navy: #0a2540;     /* Azul escuro institucional */
+            --accent-gold: #b8860b;      /* Dourado sofisticado */
+            --body-gray: #4a5568;        /* Cinza suave para leitura confortável */
+            --bg-light: #fdfdfb;         /* Off-white de fundo (estilo premium) */
+            --whatsapp-green: #25d366;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            color: #333;
+            color: var(--body-gray);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
         }
-        .navbar-brand {
+
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-navy);
             font-weight: 700;
-            letter-spacing: -0.5px;
         }
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1470&auto=format&fit=crop') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 140px 0;
-        }
-        .btn-donate {
-            background-color: #00bfa5;
-            color: white;
-            font-weight: 600;
-            border-radius: 50px;
-            padding: 12px 35px;
-            border: none;
-            transition: all 0.3s ease;
-        }
-        .btn-donate:hover {
-            background-color: #009688;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 191, 165, 0.4);
-        }
-        .section-title {
-            font-weight: 700;
-            position: relative;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-        }
-        .section-title::after {
+
+        /* Linha decorativa superior sutil */
+        body::before {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background-color: #00bfa5;
-            border-radius: 2px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-navy) 0%, var(--accent-gold) 100%);
+            z-index: 1050;
         }
-        .card-action {
-            border: none;
-            border-radius: 15px;
-            transition: transform 0.3s ease;
+
+        /* Navbar Clean e Elegante */
+        .navbar {
+            background-color: rgba(253, 253, 251, 0.95) !important;
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            border-bottom: 1px solid #eef2f7;
         }
-        .card-action:hover {
-            transform: translateY(-5px);
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-navy) !important;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
         }
-        .badge-utilidade {
-            background-color: #e3f2fd;
-            color: #0d47a1;
+
+        .nav-link {
+            color: var(--primary-navy) !important;
+            font-weight: 500;
+            margin: 0 15px;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-gold) !important;
+        }
+
+        /* Botão Principal Estilo Alfaiataria/Premium */
+        .btn-gav {
+            background-color: var(--primary-navy);
+            color: #ffffff !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 14px 32px;
+            border-radius: 0px; /* Quadrado passa mais rigidez e seriedade */
+            border: 1px solid var(--primary-navy);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gav:hover {
+            background-color: transparent;
+            color: var(--primary-navy) !important;
+            border-color: var(--primary-navy);
+        }
+
+        .btn-gav-gold {
+            background-color: var(--accent-gold);
+            border-color: var(--accent-gold);
+        }
+        .btn-gav-gold:hover {
+            background-color: transparent;
+            color: var(--accent-gold) !important;
+            border-color: var(--accent-gold);
+        }
+
+        /* Seção de Entrada (Hero) */
+        .hero-section {
+            padding: 140px 0 100px 0;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero-tag {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
             font-weight: 600;
-            padding: 8px 16px;
-            border-radius: 20px;
-            display: inline-block;
+            margin-bottom: 20px;
+            display: block;
         }
-        .pix-box {
+
+        .hero-title {
+            font-size: 4rem;
+            line-height: 1.15;
+            margin-bottom: 30px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            max-width: 800px;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        /* Seções Gerais */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+            color: #718096;
+        }
+
+        /* Molduras de fotos sofisticadas */
+        .photo-frame {
+            position: relative;
+            background: #ffffff;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: all 0.4s ease;
+        }
+
+        .photo-frame:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(10,37,64,0.08);
+            border-color: var(--accent-gold);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+        }
+
+        .photo-caption {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--primary-navy);
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        /* Bloco de Doações Clean */
+        .donation-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 60px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.02);
+            position: relative;
+        }
+
+        .donation-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--accent-gold);
+        }
+
+        .pix-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .pix-key-display {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            letter-spacing: -1px;
             background: #f8f9fa;
-            border: 2px dashed #00bfa5;
-            border-radius: 15px;
-            padding: 30px;
+            padding: 20px;
+            margin: 25px 0;
+            border-left: 3px solid var(--primary-navy);
+            word-break: break-all;
+        }
+
+        /* Contato e Diretoria */
+        .contact-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 40px;
+        }
+
+        /* Botão Flutuante Elegante do WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            bottom: 35px;
+            right: 35px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 26px;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: scale(1.08);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-navy);
+            color: #a0aec0;
+            padding: 80px 0 40px 0;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        footer h5 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent-gold);
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <a href="https://wa.me/5586981103341?text=Olá! Gostaria de falar com a diretoria da Associação Grupo Amigos da Vida." class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand text-info" href="#"><i class="fa-solid fa-hand-holding-hand me-2"></i>GAV TERESINA</a>
+            <a class="navbar-brand" href="#">GAV TERESINA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link px-3" href="#sobre">Quem Somos</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#reconhecimento">Ações & Autoridades</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#instagram">Instagram</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-donate" href="#doacoes"><i class="fa-solid fa-heart me-2"></i>Fazer Doação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#institucional">Institucional</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#atuacao">Nossa Atuação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#transparencia">Doações</a></li>
+                    <li class="nav-item px-2"><a class="nav-link" href="#diretoria">Contato</a></li>
+                    <li class="nav-item ms-lg-2"><a class="btn btn-gav" href="#transparencia">Apoiar</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section text-center">
+    <header class="hero-section">
         <div class="container">
-            <span class="badge bg-info mb-3 px-3 py-2 text-dark fw-bold text-uppercase">Associação Grupo Amigos da Vida</span>
-            <h1 class="display-4 fw-bold mb-3">Promovendo Assistência e Dignidade em Teresina</h1>
-            <p class="lead mb-4 max-width-700 mx-auto">Transformando a realidade de crianças, jovens e idosos na zona Leste através de projetos sociais e apoio comunitário contínuo.</p>
-            <a href="#doacoes" class="btn btn-donate btn-lg shadow"><i class="fa-solid fa-heart me-2"></i>Apoie Nossos Projetos</a>
+            <span class="hero-tag">Associação Beneficente</span>
+            <h1 class="hero-title">Inclusão Social e Dignidade <br>no Coração do Piauí</h1>
+            <p class="hero-subtitle">Reconhecido como de Utilidade Pública Estadual (Lei nº 7.564), o Grupo Amigos da Vida (GAV) desenvolve projetos de amparo e transformação socioeducativa na zona Leste de Teresina desde 2007.</p>
+            <a href="#transparencia" class="btn btn-gav btn-gav-gold btn-lg">Conheça Nossas Fontes de Apoio</a>
         </div>
     </header>
 
-    <section id="sobre" class="py-5">
+    <section id="institucional">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Quem Somos</h2>
-                <div class="badge-utilidade mb-4">
-                    <i class="fa-solid fa-building-shield me-2"></i>Entidade Reconhecida de Utilidade Pública Estadual (Lei nº 7.564)
-                </div>
-            </div>
-            <div class="row justify-content-center text-center">
-                <div class="col-md-10">
-                    <p class="lead text-muted mb-4">
-                        Fundado oficialmente em 2007, o <strong>Grupo Amigos da Vida (GAV)</strong> é uma organização sem fins lucrativos sediada na Avenida Maria Antonieta Burlamaqui, no bairro Vale Quem Tem, em Teresina - PI. 
-                    </p>
-                    <p class="text-muted mb-5">
-                        Nosso principal objetivo é promover a assistência social completa, focando no desenvolvimento educacional, esportivo e cultural, além de gerenciar propostas de acompanhamento familiar para garantir o amparo de quem se encontra em situação de vulnerabilidade.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="row g-4 text-center">
-                <div class="col-md-4">
-                    <div class="p-4 rounded bg-light">
-                        <div class="text-info mb-3"><i class="fa-solid fa-child fa-3x"></i></div>
-                        <h4 class="fw-bold">Crianças e Jovens</h4>
-                        <p class="text-muted">Ações socioeducativas e de inclusão para construir um futuro com mais oportunidades reais.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4 rounded bg-light">
-                        <div class="text-info mb-3"><i class="fa-solid fa-people-roof fa-3x"></i></div>
-                        <h4 class="fw-bold">Apoio Familiar</h4>
-                        <p class="text-muted">Fortalecimento de vínculos familiares através de atendimento, orientação e acolhimento estruturado.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4 rounded bg-light">
-                        <div class="text-info mb-3"><i class="fa-solid fa-graduation-cap fa-3x"></i></div>
-                        <h4 class="fw-bold">Cultura e Esporte</h4>
-                        <p class="text-muted">Oficinas e atividades dinâmicas como ferramentas fundamentais contra a exclusão social.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reconhecimento" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center section-title">Projetos & Reconhecimento</h2>
-            <p class="text-center text-muted mb-5">Nossas parcerias institucionais e ações sólidas comprovam a seriedade do nosso trabalho em prol do Piauí.</p>
-            
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1200" alt="GAV Teresina e Autoridades" class="img-fluid rounded-3 shadow-lg">
-                    <p class="text-muted small text-center mt-2"><em>Registro institucional das ações e parcerias em benefício da comunidade.</em></p>
+                    <span class="hero-tag" style="margin-bottom: 10px;">Quem Somos</span>
+                    <h2 class="section-title" style="font-size: 2.5rem;">Uma trajetória sólida voltada ao bem comum</h2>
+                    <p class="lead mb-4" style="color: var(--primary-navy); font-weight: 500;">Sediado na Avenida Maria Antonieta Burlamaqui, no Vale Quem Tem, o GAV gerencia propostas de acolhimento e desenvolvimento humano.</p>
+                    <p class="mb-0">Nosso trabalho abrange a criação de oficinas culturais, atividades de lazer e apoio socioeducativo estruturado, servindo de ponte para que jovens e famílias em vulnerabilidade social conquistem autonomia e dignidade.</p>
                 </div>
                 <div class="col-lg-6">
-                    <h3 class="fw-bold text-dark mb-3">Chancela e Impacto Social</h3>
-                    <p class="text-muted">O Grupo Amigos da Vida atua em conformidade com órgãos públicos, recebendo apoio de emendas parlamentares e parcerias via Termos de Fomento com Secretarias de Estado (SASC), permitindo que os recursos cheguem diretamente na ponta para quem mais precisa.</p>
-                    <ul class="list-unstyled mt-4 text-muted">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Transparência total em termos de fomento públicos.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Presença ativa com lideranças e comunidade em Teresina.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Gestão séria voltada para resultados sociais palpáveis.</li>
-                    </ul>
+                    <div style="border-left: 2px solid #e2e8f0; padding-left: 40px;">
+                        <h4 class="font-serif text-dark mb-3">Chancela Estadual</h4>
+                        <p class="small text-muted mb-4">A qualificação como Entidade de Utilidade Pública valida a aplicação transparente de recursos e emendas parlamentares em benefício direto da comunidade local.</p>
+                        <hr>
+                        <p class="small text-muted mt-4"><strong>CNPJ Oficial:</strong> 08.817.236/0001-27 <br><strong>Início das Atividades:</strong> 20 de Março de 2007</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="doacoes" class="py-5 bg-white">
+    <section id="atuacao" class="bg-light" style="background-color: #f8f9fa;">
         <div class="container">
-            <h2 class="text-center section-title">Como Você Pode Ajudar</h2>
-            <p class="text-center text-muted mb-5">Sua doação garante a manutenção da nossa sede no Vale Quem Tem e a continuidade dos projetos.</p>
+            <div class="text-center">
+                <span class="hero-tag">Registros Reais</span>
+                <h2 class="section-title">Nossa atuação em evidência</h2>
+                <p class="section-subtitle">Imagens autênticas que documentam o impacto das nossas ações e as articulações institucionais em prol de Teresina.</p>
+            </div>
             
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="photo-frame">
+                        <img src="https://i.postimg.cc/G2M2kF0M/gav-wellington.png" alt="Articulação Política e Institucional - GAV">
+                        <div class="photo-caption">Parcerias e Articulação Institucional</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="photo-frame">
+                        <img src="https://i.postimg.cc/PfwJL832/gav-acao-1.png" alt="Projetos Sociais GAV">
+                        <div class="photo-caption">Ações na Comunidade</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="photo-frame">
+                        <img src="https://i.postimg.cc/jjDKGGB8/Captura-de-tela-2026-05-16-215855.png" alt="Atendimento e Assistência GAV">
+                        <div class="photo-caption">Impacto Social Direto</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transparencia">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-7 text-center">
-                    <div class="pix-box shadow-sm">
-                        <div class="text-success mb-3"><i class="fa-solid fa-money-bill-transfer fa-3x"></i></div>
-                        <h3 class="fw-bold mb-2 text-dark">Faça um PIX de Qualquer Valor</h3>
-                        <p class="text-muted mb-4">Utilize os dados oficiais da nossa conta jurídica para realizar sua contribuição com total segurança:</p>
+                <div class="col-lg-9">
+                    <div class="donation-box">
+                        <span class="pix-title"><i class="fa-solid fa-shield-checkmark me-2"></i>Conta Corrente Institucional</span>
+                        <h2 class="my-3" style="font-size: 2.3rem;">Canal Oficial de Arrecadação</h2>
+                        <p>Para assegurar a manutenção dos nossos projetos e a expansão do atendimento no Vale Quem Tem, disponibilizamos nossos dados bancários jurídicos exclusivos para auditoria e controle:</p>
                         
-                        <div class="bg-dark text-info p-3 rounded font-monospace fs-4 fw-bold mb-3">
+                        <div class="pix-key-display">
                             08.817.236/0001-27
                         </div>
                         
-                        <p class="mb-1 text-uppercase fw-bold text-muted small">Favorecido:</p>
-                        <h5 class="fw-bold text-dark mb-1">Grupo de Amigos da Vida</h5>
-                        <p class="text-muted small mb-0">CNPJ: 08.817.236/0001-27 • Banco Jurídico Vinculado</p>
+                        <div class="row pt-3 g-4">
+                            <div class="col-sm-6">
+                                <p class="mb-1 small text-uppercase text-muted">Instituição Bancária</p>
+                                <h6 class="text-dark fw-bold" style="font-family:'Inter',sans-serif;">Banco do Brasil S.A.</h6>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="mb-1 small text-uppercase text-muted">Favorecido / Titular</p>
+                                <h6 class="text-dark fw-bold" style="font-family:'Inter',sans-serif;">Grupo de Amigos da Vida</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="instagram" class="py-5 bg-light text-center">
+    <section id="diretoria" class="bg-light" style="background-color: #f8f9fa; border-top: 1px solid #e2e8f0;">
         <div class="container">
-            <h2 class="section-title">Acompanhe Nosso Trabalho</h2>
-            <p class="text-muted mb-4">Siga o nosso perfil oficial <strong class="text-dark">@grupodeamigosdavida</strong> e veja o impacto diário das suas doações.</p>
-            
-            <div class="row g-3 justify-content-center mb-4">
-                <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=400&h=400&fit=crop" class="img-fluid rounded shadow-sm" alt="Ação GAV">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=400&h=400&fit=crop" class="img-fluid rounded shadow-sm" alt="Comunidade GAV">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=400&h=400&fit=crop" class="img-fluid rounded shadow-sm" alt="Projetos GAV">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=400&h=400&fit=crop" class="img-fluid rounded shadow-sm" alt="Voluntários GAV">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-card">
+                        <span class="hero-tag" style="margin-bottom: 10px;">Atendimento Direto</span>
+                        <h3 class="mb-3">Contato com a Diretoria Executiva</h3>
+                        <p class="mb-5">Canal exclusivo focado em prestação de contas, termos de fomento, emendas parlamentares ou agendamento de visitas institucionais à nossa sede.</p>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="fs-3 text-dark me-3" style="color: var(--primary-navy) !important;"><i class="fa-solid fa-phone-volume"></i></div>
+                            <div>
+                                <span class="d-block small text-muted text-uppercase">Linha Direta / WhatsApp</span>
+                                <a href="tel:+5586981103341" class="fs-4 fw-bold text-decoration-none text-dark">(86) 98110-3341</a>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/5586981103341?text=Olá! Gostaria de falar com a diretoria do GAV." target="_blank" class="btn btn-gav btn-gav-gold">
+                            <i class="fa-brands fa-whatsapp me-2"></i>Falar no WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <a href="https://instagram.com/grupodeamigosdavida" target="_blank" class="btn btn-outline-dark btn-lg px-4 rounded-pill">
-                <i class="fa-brands fa-instagram text-danger me-2"></i>Ir para o Instagram Oficial
-            </a>
         </div>
     </section>
 
-    <footer class="bg-dark text-white pt-5 pb-4 border-top border-secondary">
-        <div class="container text-center text-md-start">
+    <footer>
+        <div class="container">
             <div class="row g-4">
                 <div class="col-md-6">
-                    <h5 class="fw-bold text-info mb-3">Grupo de Amigos da Vida (GAV)</h5>
-                    <p class="text-secondary small">Atuando fortemente na prevenção, acolhimento e desenvolvimento comunitário de Teresina, PI.</p>
-                    <p class="text-secondary small mb-0"><i class="fa-solid fa-location-dot text-info me-2"></i>Av. Maria Antonieta Burlamaqui, 3551 - Vale Quem Tem. CEP: 64.057-320</p>
+                    <h5 class="font-serif">Associação Grupo Amigos da Vida</h5>
+                    <p class="small text-muted mb-3">Promovendo amparo social e desenvolvimento comunitário contínuo.</p>
+                    <p class="small text-muted"><i class="fa-solid fa-location-dot me-2"></i>Av. Maria Antonieta Burlamaqui, 3551 — Vale Quem Tem. Teresina - PI</p>
                 </div>
-                <div class="col-md-6 text-md-end text-center mt-4 mt-md-0">
-                    <h5 class="fw-bold text-white mb-3">Transparência Legal</h5>
-                    <p class="text-secondary small mb-1">CNPJ: 08.817.236/0001-27</p>
-                    <p class="text-secondary small">Início das Atividades: 20/03/2007</p>
+                <div class="col-md-6 text-md-end">
+                    <h5>Canais Digitais</h5>
+                    <p class="small text-muted">Acompanhe nossas auditorias visuais e relatórios pelo Instagram oficial:</p>
+                    <a href="https://instagram.com/grupodeamigosdavida" target="_blank" class="fw-bold"><i class="fa-brands fa-instagram me-1"></i>@grupodeamigosdavida</a>
                 </div>
             </div>
-            <hr class="border-secondary my-4">
-            <div class="text-center">
-                <p class="text-secondary small mb-0">© 2026 GAV Teresina. Desenvolvido para o bem social. Todos os direitos reservados.</p>
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 40px 0 20px 0;">
+            <div class="text-center small text-muted">
+                © 2026 GAV Teresina. CNPJ: 08.817.236/0001-27. Todos os direitos reservados.
             </div>
         </div>
     </footer>
